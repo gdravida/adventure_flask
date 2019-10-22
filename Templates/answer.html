@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<title>Spideygame</title>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/static/page.css">
+<link rel="stylesheet" type="text/css" href="/static/page.css">
+
+
+<head>
+
+</head>
+<body>
+<h1>Welcome to your superhero journey!</h1>
+<p>At any time you can <a href='/reset/' style="color:#000000">reset</a> your game.</p>
+Great! You are on your track to protecting your people. What move would you execute against this villain?<br>
+<img src="https://i.ytimg.com/vi/EmZG9DR_DLw/maxresdefault.jpg" height="350" width="500"/><br>
+
+<form action="/move/" method="post">
+    <input type="radio" name="move" value="water">Open the sewer and poor water on Sandman<br>
+    <input type="radio" value="kick" name="move">Spin wicked webs at Sandman's face<br>
+    <input type="submit" value="Submit"><br>
+</form>
+
+</body>
+</html>
