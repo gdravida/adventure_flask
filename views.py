@@ -48,15 +48,73 @@ def save_name(world: dict, Spider_name: str) -> str:
 
 @simple_route('/yes/')
 def answer(world: dict):
-    return render_template("answer.html")
+    '''
+    prompt the user to pick a training move
+    :param world: The Current World
+    :return:
+    '''
+    return render_template("training.html")
 @simple_route('/no/')
 def answer2(world: dict):
-    return render_template("No.html")\
+    '''
+    ask the user if they are sure about the decision and give the option to go back
+    :param world:
+    :return:
+    '''
+    return render_template("No.html")
+@simple_route('/response2/', methods=["POST"])
+def response(world:dict, *args):
+    '''
+    either they see the page about training again or they are told they let the city down
+    :param world:
+    :param args:
+    :return:
+    '''
+    if request.values["response"]=="Yes":
+        return render_template("letgo.html")
+    else:
+        return render_template("training.html")
 
+@simple_route('/kick/')
+def kick(world: dict):
+    '''
+    tells them that they have mastered the kick and prompt them to choose a move to execute
+    :param world:
+    :return:
+    '''
+    return render_template("kick.html")
+@simple_route('/punch/')
+def punch(world: dict):
+    '''
+    tells them that they have mastered the punch and prompt them to choose a move to execute
+    :param world:
+    :return:
+    '''
+    return render_template("punch.html")
 
 @simple_route('/move/', methods=["POST"])
 def move(world:dict, *args):
+    '''
+    they either see that they kicked the Sandman into water and killed him or didn't master the move and got killed
+    :param world:
+    :param args:
+    :return:
+    '''
     if request.values["move"]=="water":
         return render_template("waterhim.html")
     else:
         return render_template("webs.html")
+
+@simple_route('/move2/', methods=["POST"])
+def move2(world:dict, *args):
+    '''
+    they either see that they punched the Sandman into water and killed him or didn't master the move and got killed
+
+    :param world:
+    :param args:
+    :return:
+    '''
+    if request.values["move2"]=="water":
+        return render_template("waterhim2.html")
+    else:
+        return render_template("webs2.html")

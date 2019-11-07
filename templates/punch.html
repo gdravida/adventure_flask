@@ -4,16 +4,17 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="/static/page.css">
-<head>
-</head>
+
 <body>
 <h1>Welcome to your superhero journey!</h1>
 <p>At any time you can <a href='/reset/' style="color:#000000">reset</a> your game.</p>
-You have been given the powers of Spiderman<br>
-<img src="https://i.ytimg.com/vi/8_N4xpP91yY/maxresdefault.jpg" height="350" width="550"/><br>
-
-    <a href="goto/lair" style="color:#000000">Accept the powers and move on to see your tasks by clicking here</a><br>
-    <p>If you do not want these powers please make your way to the top left hand side of the screen and exit the page!!</p>
+<p>You have mastered the punch. What move would you like to execute on the Sandman</p>
+<form action="/move2/" method="post">
+    <input type="radio" name="move2" value="water">Kick the Sandman into the sewer and poor water on him<br>
+    <input type="radio" value="kick" name="move2">Punch Sandman in the face<br>
+    <input type="submit" value="Submit"><br>
+</form>
+<img src="https://media.giphy.com/media/9PEdmrLf4h4R2/200.gif" height="350" width="500"/><br>
 
 </body>
 </html>
